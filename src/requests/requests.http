@@ -1,0 +1,41 @@
+###
+# Get all
+GET http://localhost:8080/wonders
+
+###
+
+# Get single wonder
+GET http://localhost:8080/wonders/7
+
+###
+
+# Add wonder
+POST http://localhost:8080/wonders
+Content-Type: application/json
+
+{
+  "name": "Tadź Mahal",
+  "date": "1632–1654",
+  "location": "Indie",
+  "type": "Cuda turystycznych podróży, Nowe Siedem Cudów",
+  "description": "Indyjskie mauzoleum wzniesione przez Szahdżahana z dynastii Wielkich Mogołów, na pamiątkę przedwcześnie zmarłej, ukochanej żony Mumtaz Mahal."
+}
+
+###
+
+# Edit wonder
+PUT http://localhost:8080/wonders/1
+Content-Type: application/json
+
+{
+  "name": "Hagia Sophia",
+  "date": "532-537",
+  "location": "Turcja, Stambul",
+  "type": "Siedem Cudów Średniowiecznego Świata",
+  "description": "Meczet w Stambule."
+}
+
+###
+
+# Delete wonder
+DELETE http://localhost:8080/wonders/5
